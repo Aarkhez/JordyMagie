@@ -1,6 +1,6 @@
 import CarouselImg from "./carouselImg";
-import banner1 from "./../assets/banniere_img/banner1.png";
-import banner2 from "./../assets/banniere_img/banner2.png";
+import banner1 from "./../assets/banniere_img/banner1.webp";
+import banner2 from "./../assets/banniere_img/banner2.webp";
 
 export const CAROUSELIMG: CarouselImg[] = [
   {
