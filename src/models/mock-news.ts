@@ -1,7 +1,7 @@
 import New from "./new.ts";
-import AuBureauImg from "./../assets/actus_img/au-bureau.jpg";
-import JournalImg from "./../assets/actus_img/journal.jpg";
-import TiktokInstagramImg from "./../assets/actus_img/tiktok-instagram.jpg";
+import AuBureauImg from "./../assets/actus_img/au-bureau.webp";
+import JournalImg from "./../assets/actus_img/journal.webp";
+import TiktokInstagramImg from "./../assets/actus_img/tiktok-instagram.webp";
 
 export const NEWS: New[] = [
   {
