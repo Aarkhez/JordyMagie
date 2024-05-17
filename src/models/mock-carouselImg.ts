@@ -13,15 +13,5 @@ export const CAROUSELIMG: CarouselImg[] = [
     name: "Bannière 2",
     picture: banner2,
   },
-  {
-    id: 1,
-    name: "Bannière 1",
-    picture: banner1,
-  },
-  {
-    id: 1,
-    name: "Bannière 2",
-    picture: banner2,
-  },
 ];
 export default CAROUSELIMG;
