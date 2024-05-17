@@ -2,7 +2,7 @@ import SocialMedia from "./SocialMedia";
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 py-3 mt-5">
+    <footer className="bg-gray-900 py-3 mt-5">
       <div className="container mx-auto flex justify-center items-center">
         <SocialMedia
           url="https://www.tiktok.com/@jordymagie"

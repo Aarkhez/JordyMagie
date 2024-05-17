@@ -8,7 +8,7 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800">
+    <header className="bg-gray-900">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -19,7 +19,7 @@ function Header() {
             <img className="h-12 w-auto" src={Icon} alt="" />
           </Link>
         </div>
-        <div className="lg:flex-grow lg:flex lg:justify-center space-x-40">
+        <div className="lg:flex-grow lg:flex lg:justify-center space-x-40 sm:hidden">
           <Link
             to="/"
             className="text-lg font-semibold leading-6 text-white opacity-55 hover:opacity-100 transition-opacity duration-300"
@@ -27,7 +27,7 @@ function Header() {
             Home
           </Link>
           <Link
-            to="/services"
+            to="/listServices"
             className="text-lg font-semibold leading-6 text-white opacity-55 hover:opacity-100 transition-opacity duration-300"
           >
             Services
@@ -80,7 +80,7 @@ function Header() {
                     Home
                   </Link>
                   <Link
-                    to="/services"
+                    to="/listServices"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Services

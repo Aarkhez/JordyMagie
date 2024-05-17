@@ -5,8 +5,9 @@ import App from "./App.tsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.tsx";
-import Services from "./pages/Services.tsx";
+import ListServices from "./pages/ListServices.tsx";
 import Contact from "./pages/Contact.tsx";
+import Service from "./pages/Service.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,8 +15,9 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/services", element: <Services /> },
+      { path: "/listServices", element: <ListServices /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/service/:id", element: <Service /> },
     ],
   },
 ]);
