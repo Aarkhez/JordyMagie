@@ -1,14 +1,9 @@
-import { Link, useParams } from "react-router-dom";
-import SERVICES from "./../models/mock-services.ts";
+import { Link } from "react-router-dom";
+import { getServiceId } from "../utils/utils.ts";
 
 function ServiceDetail() {
-  const { id } = useParams<{ id: string }>();
-
-  // Convertir l'ID en un nombre entier
-  const serviceId = Number(id);
-
   // Rechercher le service correspondant à l'ID dans la liste SERVICES
-  const service = SERVICES.find((service) => service.id === serviceId);
+  const service = getServiceId();
 
   // Si le service n'est pas trouvé, afficher un message d'erreur
   if (!service) {
