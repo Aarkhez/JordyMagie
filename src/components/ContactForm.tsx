@@ -65,7 +65,10 @@ function ContactForm() {
     validateTel(tel);
 
     if (!emailError && !telError) {
-      sendEmail(formData);
+      sendEmail(formData)
+      toast.success(
+        "Votre message a été envoyé avec succès ! Nous vous contacterons bientôt."
+      );
     } else {
       setSubmitError(
         "Veuillez corriger les erreurs avant de soumettre le formulaire."
