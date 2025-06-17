@@ -3,10 +3,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
     <div>
+      <Analytics />
       <ToastContainer />
       <Header />
       <Outlet />
