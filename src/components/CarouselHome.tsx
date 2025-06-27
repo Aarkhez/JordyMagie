@@ -14,10 +14,12 @@ function CarouselHome() {
   return (
     <Carousel
       transition={{ duration: 2 }}
-      className="rounded-xl max-w-7xl mx-auto mt-8"
+      className="mx-auto mt-8 rounded-xl max-w-7xl"
       placeholder={null}
       onPointerEnterCapture={() => {}}
       onPointerLeaveCapture={() => {}}
+      onResize={() => {}}
+      onResizeCapture={() => {}}
       autoplay = {true}
       loop= {true}
     >

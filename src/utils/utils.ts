@@ -11,6 +11,7 @@ export function AboutPage(title: string) {
   }, []);
 }
 export function getServiceId() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { id } = useParams<{ id: string }>();
 
   // Convertir l'ID en un nombre entier
@@ -22,6 +23,7 @@ export function getServiceId() {
 }
 export function sendEmail(formData: any) {
   emailjs.init("250AIW_PwaoPkDoVv"); // Remplacez par votre User ID
+
   emailjs
     .send(
       "service_4poxq9o", // Remplacez par votre service ID

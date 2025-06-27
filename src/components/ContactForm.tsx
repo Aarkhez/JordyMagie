@@ -26,7 +26,7 @@ function ContactForm() {
     });
   };
 
-  const validateEmail = (value: any) => {
+  const validateEmail = (value: string) => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(value)) {
       setEmailError(
@@ -37,7 +37,7 @@ function ContactForm() {
     }
   };
 
-  const validateTel = (value: any) => {
+  const validateTel = (value: string) => {
     const telRegex = /^\+?[0-9]+([ \s-.][0-9]+)*$/;
     if (!telRegex.test(value)) {
       setTelError(
@@ -48,17 +48,17 @@ function ContactForm() {
     }
   };
 
-  const handleEmailBlur = (event: any) => {
+  const handleEmailBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     validateEmail(event.target.value);
     setEmail(event.target.value);
   };
 
-  const handleTelBlur = (event: any) => {
+  const handleTelBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     validateTel(event.target.value);
     setTel(event.target.value);
   };
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     validateEmail(email);
@@ -131,7 +131,7 @@ function ContactForm() {
           placeholder="01 23 45 67 89"
           required
         />
-        {telError && <p className="text-red-500 text-sm">{telError}</p>}
+        {telError && <p className="text-sm text-red-500">{telError}</p>}
       </div>
       <div>
         <label
@@ -151,7 +151,7 @@ function ContactForm() {
           placeholder="name@mail.com"
           required
         />
-        {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
+        {emailError && <p className="text-sm text-red-500">{emailError}</p>}
       </div>
       <div className="sm:col-span-2">
         <label
@@ -172,11 +172,11 @@ function ContactForm() {
       </div>
       <button
         type="submit"
-        className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="px-4 py-2 mt-4 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
       >
         Envoyer
       </button>
-      {submitError && <p className="text-red-500 text-sm">{submitError}</p>}
+      {submitError && <p className="text-sm text-red-500">{submitError}</p>}
     </form>
   );
 }
