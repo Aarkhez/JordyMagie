@@ -65,6 +65,17 @@ function ContactForm() {
 
     if (!emailError && !telError) {
       sendEmail(formData)
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      setEmail("");
+      setTel("");
+      setSubmitError("");
     } else {
       setSubmitError(
         "Veuillez corriger les erreurs avant de soumettre le formulaire."
