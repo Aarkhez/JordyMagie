@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import SERVICES from "../models/mock-services";
 import service from "../models/service";
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
 
 export function AboutPage(title: string) {
@@ -21,19 +21,17 @@ export function getServiceId() {
   return service as service;
 }
 export function sendEmail(formData: any) {
+  emailjs.init("250AIW_PwaoPkDoVv"); // Remplacez par votre User ID
   emailjs
     .send(
       "service_4poxq9o", // Remplacez par votre service ID
       "template_l52u6k8", // Remplacez par votre template ID
-      formData,
-      "lLTO7YALsApZK3jla" // Remplacez par votre user ID
+      formData
     )
-    .then((response: any) => {
-      console.log("Email envoyé avec succès!", response.status, response.text);
-      toast.success("Formulaire soumis avec succès !");
+    .then(() => {
+      toast.success("Votre message a été envoyé avec succès ! Nous vous contacterons bientôt.");
     })
-    .catch((error: any) => {
-      console.error("Erreur lors de l'envoi de l'email:", error);
-      toast.error("Une erreur s'est produite lors de l'envoi du formulaire.");
+    .catch(() => {
+      toast.error("Une erreur s'est produite lors de l'envoi du formulaire. Veuillez notifier l'administrateur du site.");
     });
 }

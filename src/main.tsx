@@ -8,6 +8,9 @@ import Home from "./pages/Home.tsx";
 import ListServices from "./pages/ListServices.tsx";
 import Contact from "./pages/Contact.tsx";
 import Service from "./pages/Service.tsx";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+
+injectSpeedInsights();
 
 const router = createBrowserRouter([
   {
