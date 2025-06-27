@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
 import { sendEmail } from "../utils/utils";
 
 function ContactForm() {
